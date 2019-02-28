@@ -36,12 +36,22 @@ public class TestClazz {
     }
 
     @Test
+    public void testCasePassed2() {
+        Assert.assertTrue(driver.findElement(By.xpath("//form[@id='login_form']")).isDisplayed());
+    }
+
+    @Test
+    public void testCasePassed3() {
+        Assert.assertTrue(driver.findElement(By.xpath("//form[@id='login_form']")).isDisplayed());
+    }
+
+    //@Test
     public void testCaseFailed() {
         Assert.assertTrue(driver.findElement(By.xpath("//form[@id='failed case']")).isDisplayed());
     }
 
-    @Ignore
-    @Test
+    //@Ignore
+    //@Test
     public void testCaseIgnored() {
         Assert.assertTrue(driver.findElement(By.xpath("//form[@id='ignored case']")).isDisplayed());
     }
