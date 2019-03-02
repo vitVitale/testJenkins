@@ -20,7 +20,7 @@ public class TestClazz {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "drv/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "drv/chromedriver");
         driver = new ChromeDriver();
         driver.get(Base_Url);
     }
