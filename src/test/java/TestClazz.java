@@ -1,16 +1,11 @@
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-/**
- * Created by burakergoren
- * class JenkinsDemo
- */
 
 public class TestClazz {
 
@@ -20,7 +15,7 @@ public class TestClazz {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "drv/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drv/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(Base_Url);
     }
