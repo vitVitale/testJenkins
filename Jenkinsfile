@@ -5,11 +5,6 @@ pipeline {
         jdk 'jdk_1.8'
     }
     stages {
-        stage ('Initialize') {
-            steps {
-
-            }
-        }
         stage ('Build') {
             steps {
                 sh 'mvn clean install -Dtest=TestClazz'
