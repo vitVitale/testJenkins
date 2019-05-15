@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                sh 'mvn clean install -Dtest=TestClazz'
+                sh 'mvn test'
             }
             post {
                 success {
