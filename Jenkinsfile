@@ -5,13 +5,12 @@ pipeline {
         jdk 'jdk_1.8'
     }
     stages {
-        stage ('Build') {
-            steps {
-                sh 'mvn test'
-            }
-            post {
-                success {
-                    junit 'target/surefire-reports/**/*.xml'
+        stages {
+            stage('Initialize') {
+                steps {
+                    sh '''
+                    echo "PATH = ${PATH}"
+                    '''
                 }
             }
         }
