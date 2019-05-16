@@ -5,13 +5,11 @@ pipeline {
         jdk 'jdk_1.8'
     }
     stages {
-        stages {
-            stage('Initialize') {
-                steps {
-                    sh '''
+        stage('Initialize') {
+            steps {
+                sh '''
                     echo "PATH = ${PATH}"
                     '''
-                }
             }
         }
     }
