@@ -1,14 +1,19 @@
 pipeline {
     agent any
-    tools {
-        maven 'maven_3.6.0'
-        jdk 'jdk_1.8'
-    }
+
     stages {
-        stage('Initialize') {
+        stage('Compile') {
             steps {
-                def mvnHome = tool name: 'Maven_3.6.0_local', type: 'maven'
-                sh "${mvnHome}/bin/mvn clean test"
+                withMaven(maven : 'maven_3.6.0') {
+                    sh 'mvn clean compile'
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                withMaven(maven : 'maven_3.6.0') {
+                    sh 'mvn test'
+                }
             }
         }
     }
