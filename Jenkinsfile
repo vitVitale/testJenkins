@@ -5,7 +5,7 @@ pipeline {
         stage('Test') {
             steps {
                 bat "echo 'This is a minimal pipeline.'"
-                withMaven(maven : 'maven_3_5_0') {
+                withMaven(maven : 'maven_3.6.0') {
                     bat 'mvn clean test'
                 }
             }
