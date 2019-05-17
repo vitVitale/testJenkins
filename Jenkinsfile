@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh "echo 'This is a minimal pipeline.'"
+                bat "echo 'This is a minimal pipeline.'"
             }
         }
     }
