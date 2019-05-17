@@ -7,9 +7,8 @@ pipeline {
     stages {
         stage('Initialize') {
             steps {
-                sh '''
-                    echo "PATH = ${JAVA_HOME}"
-                    '''
+                def mvnHome = tool name: 'Maven_3.6.0_local', type: 'maven'
+                sh "${mvnHome}/bin/mvn clean test"
             }
         }
     }
