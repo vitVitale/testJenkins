@@ -5,7 +5,7 @@ pipeline {
         stage('Test') {
             steps {
                 withMaven(maven : 'maven_3.6.0') {
-                    sh 'mvn clean install -Dtest=TestClazz'
+                    sh 'mvn clean test'
                 }
             }
         }
