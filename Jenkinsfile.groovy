@@ -5,7 +5,7 @@ pipeline {
         stage('InitialPreparing') {
             steps {
                 sh "echo 'This is a minimal pipeline.'"
-                withMaven(maven : 'maven_3.6.0') {
+                withMaven(maven : 'MyMaven_3.6.1') {
                     sh 'mvn clean'
                 }
             }
@@ -13,7 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh "echo 'Lets build this sh*t.'"
-                withMaven(maven : 'maven_3.6.0') {
+                withMaven(maven : 'MyMaven_3.6.1') {
                     sh 'mvn -Dmaven.test.skip=true package'
                 }
             }
@@ -27,7 +27,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh "echo 'go to test it.'"
-                withMaven(maven : 'maven_3.6.0') {
+                withMaven(maven : 'MyMaven_3.6.1') {
                     sh 'mvn test'
                 }
             }
