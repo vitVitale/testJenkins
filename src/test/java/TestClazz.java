@@ -1,4 +1,7 @@
-import org.junit.*;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -37,13 +40,13 @@ public class TestClazz {
         Assert.assertTrue(driver.findElement(By.xpath("//form[@id='login_form']")).isDisplayed());
     }
 
-    @Test
+    //@Test
     public void testCaseFailed() {
         Assert.assertTrue(driver.findElement(By.xpath("//form[@id='failed case']")).isDisplayed());
     }
 
-    @Ignore
-    @Test
+    //@Ignore
+    //@Test
     public void testCaseIgnored() {
         Assert.assertTrue(driver.findElement(By.xpath("//form[@id='ignored case']")).isDisplayed());
     }
