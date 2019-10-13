@@ -1,3 +1,5 @@
+@Library('jenkins-pipeline-shared-lib-sample')_
+
 pipeline {
     agent any
 
@@ -35,6 +37,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh "echo 'This is place for deploy script'"
+                deploy()
+                sh "echo 'method of shared library'"
             }
         }
     }
